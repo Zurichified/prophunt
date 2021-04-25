@@ -39,5 +39,5 @@ to run it --> just run CallgraphAnalyzer, it will read index.csv from csv1 and i
 *Example:*
 `$ CallgraphAnalyzer`  
 
-Output: csv2 folder --> every project's csv file, index.csv showing the files (name, project_csv, project_path)
+Output: csv2 folder --> every project's csv file, index.csv showing the files (name, project_csv, project_path)  
 These can later be used for any analysis purposes
