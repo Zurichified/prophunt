@@ -9,21 +9,22 @@ This Go project has 3 mains:
 
 Usage of each main:
 
-- Dependency fetcher (This will fetch the dependencies for the projects) [1) Go get 2) GoABS deps.Fetch]
-to build it --> $ go build fetch_dependencies.go
-to run it --> give path of "project_commit_place.csv" from downloaderscript 
-(you need to have projects already downloaded to your system for the downloader script to work, see other repo: https://github.com/Zurichified/goprojectdownloader)
+- Dependency fetcher (This will fetch the dependencies for the projects) [1) Go get 2) GoABS deps.Fetch]  
+to build it --> $ go build fetch_dependencies.go  
+to run it --> give path of "project_commit_place.csv" from downloaderscript  
+(you need to have projects already downloaded to your system for the dependency fetcher to work, see other repo: https://github.com/Zurichified/goprojectdownloader)  
 
-Example:
-$ fetch_dependencies "...BenchmarkProjects\project_commit_place.csv"
+*Example:*
+`$ fetch_dependencies "...BenchmarkProjects\project_commit_place.csv"`
 
 
 - Prophunt
-to build it --> $ go build -o Prophunt main.go data.go parser.go pathwalker.go csvhandler.go callgraph.go
-to run it --> give the path of "project_commit_place.csv" from downloaderscript
+to build it --> $ go build -o Prophunt main.go data.go parser.go pathwalker.go csvhandler.go callgraph.go  
+to run it --> give the path of "project_commit_place.csv" from downloaderscript  
+(you need to have projects already downloaded to your system for the dependency fetcher to work, see other repo: https://github.com/Zurichified/goprojectdownloader)  
 
-Example:
-$ Prophunt "...BenchmarkProjects\project_commit_place.csv"
+*Example:*
+`$ Prophunt "...BenchmarkProjects\project_commit_place.csv"`
 
 Output: csv1 folder --> every project's csv file
                         index.csv showing the files (name, project_csv, project_path)
@@ -35,8 +36,8 @@ Output: csv1 folder --> every project's csv file
 to build it --> $ go build -o CallgraphAnalyzer cg.go data.go parser.go pathwalker.go csvhandler.go callgraph.go
 to run it --> just run CallgraphAnalyzer, it will read index.csv from csv1 and iterate through projects to cumulatively collect feature values
 
-Example:
-$ CallgraphAnalyzer
+*Example:*
+`$ CallgraphAnalyzer`
 
 Output: csv2 folder --> every project's csv file
                         index.csv showing the files (name, project_csv, project_path)
